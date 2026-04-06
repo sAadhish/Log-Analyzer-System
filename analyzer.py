@@ -1,5 +1,4 @@
 from reader import read_logs 
-from log_parser import parse_log_line
 
 def count_levels(logs):
     counts = {}
@@ -33,7 +32,7 @@ def most_common_error(logs):
     most_common_error_message = max(error_count, key=error_count.get)
     return most_common_error_message
 
-#Giving only ERROR logs
+#filter by level
 def filter_by_level(logs, level):
     filtered = []
 
